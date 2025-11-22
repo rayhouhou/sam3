@@ -153,6 +153,15 @@ def plot_mask(mask, color="r", ax=None):
     ax.imshow(mask_img)
 
 
+def plot_mask_outline(mask, color="r", ax=None, linewidth=1.5):
+    """
+    Draw only the outline of a binary mask to avoid obscuring the interior.
+    """
+    if ax is None:
+        ax = plt.gca()
+    ax.contour(mask, levels=[0.5], colors=[color], linewidths=linewidth)
+
+
 def normalize_bbox(bbox_xywh, img_w, img_h):
     # Assumes bbox_xywh is in XYWH format
     if isinstance(bbox_xywh, list):
@@ -860,18 +869,7 @@ def plot_results(img, results):
     print(f"found {nb_objects} object(s)")
     for i in range(nb_objects):
         color = COLORS[i % len(COLORS)]
-        plot_mask(results["masks"][i].squeeze(0).cpu(), color=color)
-        w, h = img.size
-        prob = results["scores"][i].item()
-        plot_bbox(
-            h,
-            w,
-            results["boxes"][i].cpu(),
-            text=f"(id={i}, {prob=:.2f})",
-            box_format="XYXY",
-            color=color,
-            relative_coords=False,
-        )
+        plot_mask_outline(results["masks"][i].squeeze(0).cpu(), color=color, linewidth=1.25)
 
 
 def single_visualization(img, anns, title):

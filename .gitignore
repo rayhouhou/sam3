@@ -151,3 +151,9 @@ Thumbs.db
 # BPE vocabulary files
 *.bpe
 *.vocab
+assets/images/plaques/plate1uncounted.png
+assets/images/plaques/plate2uncounted.png
+assets/images/plaques/Test Elispot_Red+Test Elispot_Green+Test Elispot_Blue_B7_1_001.tif
+assets/images/plaques/Test Elispot_Red+Test Elispot_Green+Test Elispot_Blue_C7_1_001.tif
+assets/images/plaques/Test Elispot_Red+Test Elispot_Green+Test Elispot_Blue_G1_1_001.tif
+assets/images/plaques/Test Elispot_Red+Test Elispot_Green+Test Elispot_Blue_G7_1_001.tif
