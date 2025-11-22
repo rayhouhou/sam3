@@ -21,7 +21,7 @@ Open Anaconda Prompt
 **Clone the repository and install the package**:<br>
 ```git clone https://github.com/rayhouhou/sam3.git``` <br>
 ```cd sam3``` <br>
-```pip install -e``` . <br>
+```pip install -e``` <br>
 Install additional dependencies for notebooks:
 ```pip install -e ".[notebooks]"``` <br>
 
