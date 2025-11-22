@@ -29,7 +29,7 @@ Install additional dependencies for notebooks:
 ```jupyter notebook examples/sam3_image_predictor_example.ipynb``` <br>
 
 **Add plates to be analysed to the following folder**:
-```sam3\assets\images\plaques```
-**Example Output**
+```sam3\assets\images\plaques```<br>
+**Example Output**<br>
 <img width="896" height="776" alt="image" src="https://github.com/user-attachments/assets/d21b64dd-df1e-488a-8e07-32617c67938a" />
 
